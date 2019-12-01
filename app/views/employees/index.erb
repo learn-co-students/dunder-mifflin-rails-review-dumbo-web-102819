@@ -1,0 +1,15 @@
+<h1>THE DUNDER MIFFLINFINITY EMPLOYEE CATALOGUE </h1>
+
+<ul>
+<% @employees.each do |employee| %>
+<li>
+<%= link_to employee.to_s, employee %>
+</li>
+<% end %>
+</ul>
+
+<%= link_to "New Here?", new_employee_path %>
+
+<br>
+
+<%= link_to "Wanna see dem dogs?", dogs_path %>
