@@ -1,0 +1,13 @@
+<h1>WHO LET THE DOGS OUT?!?</h1>
+<% @sorted = @dogs.sort_by { |dog| dog.employees.length } %>
+<% @sorted.reverse!%>
+<ul>
+<% @sorted.each do |dog| %>
+<li>
+<%= link_to dog.name, dog %>
+</li>
+<% end %>
+</ul>
+
+<br>
+<%= link_to "Wanna see the hoomans?", employees_path %>
